@@ -67,7 +67,7 @@ async function get(nomeTabela) {
     return lista;
 }
 
-async function getByID(nomeTabela, id) {
+async function getById(nomeTabela, id) {
     const docRef = doc(db, nomeTabela, id);
     const docSnap = await getDoc(docRef);
 
@@ -89,6 +89,6 @@ async function remove(nomeTabela, id) {
 module.exports = {
     save,
     get,
-    getByID,
+    getById,
     remove
 }
